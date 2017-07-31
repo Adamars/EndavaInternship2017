@@ -1,0 +1,3693 @@
+[10:08:57] Hello, World!
+[10:17:34] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[10:17:37] cannot create sessionFactory
+org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:244)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:208)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:189)
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:51)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:94)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:217)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:189)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.handleTypes(MetadataBuildingProcess.java:352)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:111)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:83)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:418)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:87)
+	at org.hibernate.boot.MetadataSources.buildMetadata(MetadataSources.java:179)
+	at DbPopulator.main(DbPopulator.java:28)
+Caused by: org.hibernate.exception.JDBCConnectionException: Error calling Driver#connect
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator$1$1.convert(BasicConnectionCreator.java:105)
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.convertSqlException(BasicConnectionCreator.java:123)
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:41)
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:58)
+	at org.hibernate.engine.jdbc.connections.internal.PooledConnections.addConnections(PooledConnections.java:106)
+	at org.hibernate.engine.jdbc.connections.internal.PooledConnections.<init>(PooledConnections.java:40)
+	at org.hibernate.engine.jdbc.connections.internal.PooledConnections.<init>(PooledConnections.java:19)
+	at org.hibernate.engine.jdbc.connections.internal.PooledConnections$Builder.build(PooledConnections.java:138)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildPool(DriverManagerConnectionProviderImpl.java:110)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:74)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:94)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:217)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:189)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.buildJdbcConnectionAccess(JdbcEnvironmentInitiator.java:145)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:66)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:88)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:234)
+	... 13 more
+Caused by: org.postgresql.util.PSQLException: FATAL: password authentication failed for user "postgresql"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:433)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:208)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:66)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:215)
+	at org.postgresql.Driver.makeConnection(Driver.java:406)
+	at org.postgresql.Driver.connect(Driver.java:274)
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:38)
+	... 28 more
+[10:18:21] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[10:18:22] cannot create sessionFactory
+org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:244)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:208)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:189)
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:51)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:94)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:217)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:189)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.handleTypes(MetadataBuildingProcess.java:352)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:111)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:83)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:418)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:87)
+	at org.hibernate.boot.MetadataSources.buildMetadata(MetadataSources.java:179)
+	at DbPopulator.main(DbPopulator.java:28)
+Caused by: org.hibernate.exception.JDBCConnectionException: Error calling Driver#connect
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator$1$1.convert(BasicConnectionCreator.java:105)
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.convertSqlException(BasicConnectionCreator.java:123)
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:41)
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:58)
+	at org.hibernate.engine.jdbc.connections.internal.PooledConnections.addConnections(PooledConnections.java:106)
+	at org.hibernate.engine.jdbc.connections.internal.PooledConnections.<init>(PooledConnections.java:40)
+	at org.hibernate.engine.jdbc.connections.internal.PooledConnections.<init>(PooledConnections.java:19)
+	at org.hibernate.engine.jdbc.connections.internal.PooledConnections$Builder.build(PooledConnections.java:138)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildPool(DriverManagerConnectionProviderImpl.java:110)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:74)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:94)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:217)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:189)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.buildJdbcConnectionAccess(JdbcEnvironmentInitiator.java:145)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:66)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:88)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:234)
+	... 13 more
+Caused by: org.postgresql.util.PSQLException: FATAL: password authentication failed for user "postgresql"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:433)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:208)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:66)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:215)
+	at org.postgresql.Driver.makeConnection(Driver.java:406)
+	at org.postgresql.Driver.connect(Driver.java:274)
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:38)
+	... 28 more
+[10:19:58] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[10:20:02] 
+    drop table if exists test cascade
+[10:20:02] 
+    drop sequence hibernate_sequence
+[10:20:02] create sequence hibernate_sequence start 1 increment 1
+[10:20:02] 
+    create table test (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[10:20:02] 
+    alter table test 
+        add constraint UK_1chowmbf27f0cbp7on9ysvhjo unique (name)
+[10:20:02] 
+    select
+        nextval ('hibernate_sequence')
+[10:20:02] 
+    /* insert model.TestEntity
+        */ insert 
+        into
+            test
+            (name, id) 
+        values
+            (?, ?)
+[10:20:02] binding parameter [1] as [VARCHAR] - [super foo]
+[10:20:02] binding parameter [2] as [BIGINT] - [1]
+[10:39:09] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[10:39:16] 
+    drop table if exists test cascade
+[10:39:17] 
+    drop sequence hibernate_sequence
+[10:39:17] create sequence hibernate_sequence start 1 increment 1
+[10:39:17] 
+    create table test (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[10:39:17] 
+    alter table test 
+        add constraint UK_1chowmbf27f0cbp7on9ysvhjo unique (name)
+[10:39:18] 
+    select
+        nextval ('hibernate_sequence')
+[10:39:18] 
+    /* insert model.TestEntity
+        */ insert 
+        into
+            test
+            (name, id) 
+        values
+            (?, ?)
+[10:39:18] binding parameter [1] as [VARCHAR] - [super foo]
+[10:39:18] binding parameter [2] as [BIGINT] - [1]
+[10:52:47] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[10:52:49] 
+    drop table if exists test cascade
+[10:52:49] 
+    drop sequence hibernate_sequence
+[10:52:49] create sequence hibernate_sequence start 1 increment 1
+[10:52:49] 
+    create table test (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[10:52:49] 
+    alter table test 
+        add constraint UK_1chowmbf27f0cbp7on9ysvhjo unique (name)
+[10:52:49] 
+    select
+        nextval ('hibernate_sequence')
+[10:52:49] 
+    /* insert model.TestEntity
+        */ insert 
+        into
+            test
+            (name, id) 
+        values
+            (?, ?)
+[10:52:49] binding parameter [1] as [VARCHAR] - [super foo]
+[10:52:49] binding parameter [2] as [BIGINT] - [1]
+[11:13:06] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[11:13:09] 
+    drop table if exists test cascade
+[11:13:09] 
+    drop sequence hibernate_sequence
+[11:13:09] create sequence hibernate_sequence start 1 increment 1
+[11:13:09] 
+    create table test (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[11:13:09] 
+    alter table test 
+        add constraint UK_1chowmbf27f0cbp7on9ysvhjo unique (name)
+[11:13:09] 
+    select
+        nextval ('hibernate_sequence')
+[11:13:09] 
+    /* insert model.TestEntity
+        */ insert 
+        into
+            test
+            (name, id) 
+        values
+            (?, ?)
+[11:13:09] binding parameter [1] as [VARCHAR] - [super foo]
+[11:13:09] binding parameter [2] as [BIGINT] - [1]
+[14:12:48] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[14:12:52] 
+    drop table if exists products cascade
+[14:12:52] 
+    drop table if exists test cascade
+[14:12:52] 
+    drop sequence hibernate_sequence
+[14:12:52] create sequence hibernate_sequence start 1 increment 1
+[14:12:52] 
+    create table products (
+        id int4 not null,
+        description varchar(255),
+        name varchar(255),
+        stock int4,
+        primary key (id)
+    )
+[14:12:52] 
+    create table test (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[14:12:52] 
+    alter table test 
+        add constraint UK_1chowmbf27f0cbp7on9ysvhjo unique (name)
+[14:12:52] 
+    select
+        nextval ('hibernate_sequence')
+[14:12:52] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:12:52] binding parameter [1] as [VARCHAR] - [A wonderful plane]
+[14:12:52] binding parameter [2] as [VARCHAR] - [Plane]
+[14:12:52] binding parameter [3] as [INTEGER] - [10]
+[14:12:52] binding parameter [4] as [INTEGER] - [1]
+[14:23:41] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[14:23:43] 
+    drop table if exists products cascade
+[14:23:43] 
+    drop table if exists test cascade
+[14:23:43] 
+    drop sequence hibernate_sequence
+[14:23:43] create sequence hibernate_sequence start 1 increment 1
+[14:23:43] 
+    create table products (
+        id int4 not null,
+        description varchar(255),
+        name varchar(255),
+        stock int4,
+        primary key (id)
+    )
+[14:23:43] 
+    create table test (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[14:23:43] 
+    alter table test 
+        add constraint UK_1chowmbf27f0cbp7on9ysvhjo unique (name)
+[14:23:43] 
+    select
+        nextval ('hibernate_sequence')
+[14:23:43] 
+    select
+        nextval ('hibernate_sequence')
+[14:23:43] 
+    select
+        nextval ('hibernate_sequence')
+[14:23:43] 
+    select
+        nextval ('hibernate_sequence')
+[14:23:43] 
+    select
+        nextval ('hibernate_sequence')
+[14:23:43] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:23:43] binding parameter [1] as [VARCHAR] - [A blue plane]
+[14:23:43] binding parameter [2] as [VARCHAR] - [Plane]
+[14:23:43] binding parameter [3] as [INTEGER] - [10]
+[14:23:43] binding parameter [4] as [INTEGER] - [1]
+[14:23:43] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:23:43] binding parameter [1] as [VARCHAR] - [A red car]
+[14:23:43] binding parameter [2] as [VARCHAR] - [Car]
+[14:23:43] binding parameter [3] as [INTEGER] - [10]
+[14:23:43] binding parameter [4] as [INTEGER] - [2]
+[14:23:43] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:23:43] binding parameter [1] as [VARCHAR] - [A black doll]
+[14:23:43] binding parameter [2] as [VARCHAR] - [Doll]
+[14:23:43] binding parameter [3] as [INTEGER] - [10]
+[14:23:43] binding parameter [4] as [INTEGER] - [3]
+[14:23:43] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:23:43] binding parameter [1] as [VARCHAR] - [A green lego set]
+[14:23:43] binding parameter [2] as [VARCHAR] - [Lego]
+[14:23:43] binding parameter [3] as [INTEGER] - [10]
+[14:23:43] binding parameter [4] as [INTEGER] - [4]
+[14:23:43] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:23:43] binding parameter [1] as [VARCHAR] - [A red plane]
+[14:23:43] binding parameter [2] as [VARCHAR] - [Plane]
+[14:23:43] binding parameter [3] as [INTEGER] - [10]
+[14:23:43] binding parameter [4] as [INTEGER] - [5]
+[14:31:23] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[14:31:25] 
+    drop table if exists colors cascade
+[14:31:25] 
+    drop table if exists products cascade
+[14:31:25] 
+    drop table if exists test cascade
+[14:31:25] 
+    drop sequence hibernate_sequence
+[14:31:25] create sequence hibernate_sequence start 1 increment 1
+[14:31:25] 
+    create table colors (
+        id int4 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[14:31:25] 
+    create table products (
+        id int4 not null,
+        description varchar(255),
+        name varchar(255),
+        stock int4,
+        primary key (id)
+    )
+[14:31:25] 
+    create table test (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[14:31:25] 
+    alter table test 
+        add constraint UK_1chowmbf27f0cbp7on9ysvhjo unique (name)
+[14:31:25] 
+    select
+        nextval ('hibernate_sequence')
+[14:31:25] 
+    select
+        nextval ('hibernate_sequence')
+[14:31:25] 
+    select
+        nextval ('hibernate_sequence')
+[14:31:25] 
+    select
+        nextval ('hibernate_sequence')
+[14:31:25] 
+    select
+        nextval ('hibernate_sequence')
+[14:31:25] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:31:25] binding parameter [1] as [VARCHAR] - [A blue plane]
+[14:31:25] binding parameter [2] as [VARCHAR] - [Plane]
+[14:31:25] binding parameter [3] as [INTEGER] - [10]
+[14:31:25] binding parameter [4] as [INTEGER] - [1]
+[14:31:25] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:31:25] binding parameter [1] as [VARCHAR] - [A red car]
+[14:31:25] binding parameter [2] as [VARCHAR] - [Car]
+[14:31:25] binding parameter [3] as [INTEGER] - [20]
+[14:31:25] binding parameter [4] as [INTEGER] - [2]
+[14:31:25] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:31:25] binding parameter [1] as [VARCHAR] - [A black doll]
+[14:31:25] binding parameter [2] as [VARCHAR] - [Doll]
+[14:31:25] binding parameter [3] as [INTEGER] - [30]
+[14:31:25] binding parameter [4] as [INTEGER] - [3]
+[14:31:25] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:31:25] binding parameter [1] as [VARCHAR] - [A green lego set]
+[14:31:25] binding parameter [2] as [VARCHAR] - [Lego]
+[14:31:25] binding parameter [3] as [INTEGER] - [40]
+[14:31:25] binding parameter [4] as [INTEGER] - [4]
+[14:31:25] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:31:25] binding parameter [1] as [VARCHAR] - [A red plane]
+[14:31:25] binding parameter [2] as [VARCHAR] - [Plane]
+[14:31:25] binding parameter [3] as [INTEGER] - [50]
+[14:31:25] binding parameter [4] as [INTEGER] - [5]
+[14:31:25] 
+    select
+        nextval ('hibernate_sequence')
+[14:31:25] 
+    select
+        nextval ('hibernate_sequence')
+[14:31:25] 
+    select
+        nextval ('hibernate_sequence')
+[14:31:25] 
+    select
+        nextval ('hibernate_sequence')
+[14:31:25] 
+    select
+        nextval ('hibernate_sequence')
+[14:31:25] 
+    select
+        nextval ('hibernate_sequence')
+[14:32:24] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[14:32:26] 
+    drop table if exists colors cascade
+[14:32:26] 
+    drop table if exists products cascade
+[14:32:26] 
+    drop table if exists test cascade
+[14:32:26] 
+    drop sequence hibernate_sequence
+[14:32:26] create sequence hibernate_sequence start 1 increment 1
+[14:32:26] 
+    create table colors (
+        id int4 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[14:32:26] 
+    create table products (
+        id int4 not null,
+        description varchar(255),
+        name varchar(255),
+        stock int4,
+        primary key (id)
+    )
+[14:32:26] 
+    create table test (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[14:32:26] 
+    alter table test 
+        add constraint UK_1chowmbf27f0cbp7on9ysvhjo unique (name)
+[14:32:26] 
+    select
+        nextval ('hibernate_sequence')
+[14:32:26] 
+    select
+        nextval ('hibernate_sequence')
+[14:32:26] 
+    select
+        nextval ('hibernate_sequence')
+[14:32:26] 
+    select
+        nextval ('hibernate_sequence')
+[14:32:26] 
+    select
+        nextval ('hibernate_sequence')
+[14:32:26] 
+    select
+        nextval ('hibernate_sequence')
+[14:32:26] 
+    select
+        nextval ('hibernate_sequence')
+[14:32:26] 
+    select
+        nextval ('hibernate_sequence')
+[14:32:26] 
+    select
+        nextval ('hibernate_sequence')
+[14:32:26] 
+    select
+        nextval ('hibernate_sequence')
+[14:32:26] 
+    select
+        nextval ('hibernate_sequence')
+[14:32:26] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:32:26] binding parameter [1] as [VARCHAR] - [A blue plane]
+[14:32:26] binding parameter [2] as [VARCHAR] - [Plane]
+[14:32:26] binding parameter [3] as [INTEGER] - [10]
+[14:32:26] binding parameter [4] as [INTEGER] - [1]
+[14:32:26] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:32:26] binding parameter [1] as [VARCHAR] - [A red car]
+[14:32:26] binding parameter [2] as [VARCHAR] - [Car]
+[14:32:26] binding parameter [3] as [INTEGER] - [20]
+[14:32:26] binding parameter [4] as [INTEGER] - [2]
+[14:32:26] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:32:26] binding parameter [1] as [VARCHAR] - [A black doll]
+[14:32:26] binding parameter [2] as [VARCHAR] - [Doll]
+[14:32:26] binding parameter [3] as [INTEGER] - [30]
+[14:32:26] binding parameter [4] as [INTEGER] - [3]
+[14:32:26] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:32:26] binding parameter [1] as [VARCHAR] - [A green lego set]
+[14:32:26] binding parameter [2] as [VARCHAR] - [Lego]
+[14:32:26] binding parameter [3] as [INTEGER] - [40]
+[14:32:26] binding parameter [4] as [INTEGER] - [4]
+[14:32:26] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:32:26] binding parameter [1] as [VARCHAR] - [A red plane]
+[14:32:26] binding parameter [2] as [VARCHAR] - [Plane]
+[14:32:26] binding parameter [3] as [INTEGER] - [50]
+[14:32:26] binding parameter [4] as [INTEGER] - [5]
+[14:32:26] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:32:26] binding parameter [1] as [VARCHAR] - [Red]
+[14:32:26] binding parameter [2] as [INTEGER] - [6]
+[14:32:26] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:32:26] binding parameter [1] as [VARCHAR] - [Green]
+[14:32:26] binding parameter [2] as [INTEGER] - [7]
+[14:32:26] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:32:26] binding parameter [1] as [VARCHAR] - [White]
+[14:32:26] binding parameter [2] as [INTEGER] - [8]
+[14:32:26] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:32:26] binding parameter [1] as [VARCHAR] - [Black]
+[14:32:26] binding parameter [2] as [INTEGER] - [9]
+[14:32:26] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:32:26] binding parameter [1] as [VARCHAR] - [Yellow]
+[14:32:26] binding parameter [2] as [INTEGER] - [10]
+[14:32:26] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:32:26] binding parameter [1] as [VARCHAR] - [Blue]
+[14:32:26] binding parameter [2] as [INTEGER] - [11]
+[14:33:01] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[14:33:06] 
+    drop table if exists colors cascade
+[14:33:06] 
+    drop table if exists products cascade
+[14:33:06] 
+    drop table if exists test cascade
+[14:33:06] 
+    drop sequence hibernate_sequence
+[14:33:06] create sequence hibernate_sequence start 1 increment 1
+[14:33:06] 
+    create table colors (
+        id int4 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[14:33:06] 
+    create table products (
+        id int4 not null,
+        description varchar(255),
+        name varchar(255),
+        stock int4,
+        primary key (id)
+    )
+[14:33:06] 
+    create table test (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[14:33:06] 
+    alter table test 
+        add constraint UK_1chowmbf27f0cbp7on9ysvhjo unique (name)
+[14:33:07] 
+    select
+        nextval ('hibernate_sequence')
+[14:33:07] 
+    select
+        nextval ('hibernate_sequence')
+[14:33:07] 
+    select
+        nextval ('hibernate_sequence')
+[14:33:07] 
+    select
+        nextval ('hibernate_sequence')
+[14:33:07] 
+    select
+        nextval ('hibernate_sequence')
+[14:33:07] 
+    select
+        nextval ('hibernate_sequence')
+[14:33:07] 
+    select
+        nextval ('hibernate_sequence')
+[14:33:07] 
+    select
+        nextval ('hibernate_sequence')
+[14:33:07] 
+    select
+        nextval ('hibernate_sequence')
+[14:33:07] 
+    select
+        nextval ('hibernate_sequence')
+[14:33:07] 
+    select
+        nextval ('hibernate_sequence')
+[14:33:07] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:33:07] binding parameter [1] as [VARCHAR] - [A blue plane]
+[14:33:07] binding parameter [2] as [VARCHAR] - [Plane]
+[14:33:07] binding parameter [3] as [INTEGER] - [10]
+[14:33:07] binding parameter [4] as [INTEGER] - [1]
+[14:33:07] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:33:07] binding parameter [1] as [VARCHAR] - [A red car]
+[14:33:07] binding parameter [2] as [VARCHAR] - [Car]
+[14:33:07] binding parameter [3] as [INTEGER] - [20]
+[14:33:07] binding parameter [4] as [INTEGER] - [2]
+[14:33:07] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:33:07] binding parameter [1] as [VARCHAR] - [A black doll]
+[14:33:07] binding parameter [2] as [VARCHAR] - [Doll]
+[14:33:07] binding parameter [3] as [INTEGER] - [30]
+[14:33:07] binding parameter [4] as [INTEGER] - [3]
+[14:33:07] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:33:07] binding parameter [1] as [VARCHAR] - [A green lego set]
+[14:33:07] binding parameter [2] as [VARCHAR] - [Lego]
+[14:33:07] binding parameter [3] as [INTEGER] - [40]
+[14:33:07] binding parameter [4] as [INTEGER] - [4]
+[14:33:07] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:33:07] binding parameter [1] as [VARCHAR] - [A red plane]
+[14:33:07] binding parameter [2] as [VARCHAR] - [Plane]
+[14:33:07] binding parameter [3] as [INTEGER] - [50]
+[14:33:07] binding parameter [4] as [INTEGER] - [5]
+[14:33:07] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:33:07] binding parameter [1] as [VARCHAR] - [Red]
+[14:33:07] binding parameter [2] as [INTEGER] - [6]
+[14:33:07] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:33:07] binding parameter [1] as [VARCHAR] - [Green]
+[14:33:07] binding parameter [2] as [INTEGER] - [7]
+[14:33:07] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:33:07] binding parameter [1] as [VARCHAR] - [White]
+[14:33:07] binding parameter [2] as [INTEGER] - [8]
+[14:33:07] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:33:07] binding parameter [1] as [VARCHAR] - [Black]
+[14:33:07] binding parameter [2] as [INTEGER] - [9]
+[14:33:07] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:33:07] binding parameter [1] as [VARCHAR] - [Yellow]
+[14:33:07] binding parameter [2] as [INTEGER] - [10]
+[14:33:07] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:33:07] binding parameter [1] as [VARCHAR] - [Blue]
+[14:33:07] binding parameter [2] as [INTEGER] - [11]
+[14:33:10] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[14:33:13] 
+    drop table if exists colors cascade
+[14:33:13] 
+    drop table if exists products cascade
+[14:33:13] 
+    drop table if exists test cascade
+[14:33:13] 
+    drop sequence hibernate_sequence
+[14:33:13] create sequence hibernate_sequence start 1 increment 1
+[14:33:13] 
+    create table colors (
+        id int4 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[14:33:13] 
+    create table products (
+        id int4 not null,
+        description varchar(255),
+        name varchar(255),
+        stock int4,
+        primary key (id)
+    )
+[14:33:13] 
+    create table test (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[14:33:13] 
+    alter table test 
+        add constraint UK_1chowmbf27f0cbp7on9ysvhjo unique (name)
+[14:33:13] 
+    select
+        nextval ('hibernate_sequence')
+[14:33:13] 
+    select
+        nextval ('hibernate_sequence')
+[14:33:13] 
+    select
+        nextval ('hibernate_sequence')
+[14:33:13] 
+    select
+        nextval ('hibernate_sequence')
+[14:33:13] 
+    select
+        nextval ('hibernate_sequence')
+[14:33:13] 
+    select
+        nextval ('hibernate_sequence')
+[14:33:13] 
+    select
+        nextval ('hibernate_sequence')
+[14:33:13] 
+    select
+        nextval ('hibernate_sequence')
+[14:33:13] 
+    select
+        nextval ('hibernate_sequence')
+[14:33:13] 
+    select
+        nextval ('hibernate_sequence')
+[14:33:13] 
+    select
+        nextval ('hibernate_sequence')
+[14:33:13] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:33:13] binding parameter [1] as [VARCHAR] - [A blue plane]
+[14:33:13] binding parameter [2] as [VARCHAR] - [Plane]
+[14:33:13] binding parameter [3] as [INTEGER] - [10]
+[14:33:13] binding parameter [4] as [INTEGER] - [1]
+[14:33:13] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:33:13] binding parameter [1] as [VARCHAR] - [A red car]
+[14:33:13] binding parameter [2] as [VARCHAR] - [Car]
+[14:33:13] binding parameter [3] as [INTEGER] - [20]
+[14:33:13] binding parameter [4] as [INTEGER] - [2]
+[14:33:13] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:33:13] binding parameter [1] as [VARCHAR] - [A black doll]
+[14:33:13] binding parameter [2] as [VARCHAR] - [Doll]
+[14:33:13] binding parameter [3] as [INTEGER] - [30]
+[14:33:13] binding parameter [4] as [INTEGER] - [3]
+[14:33:13] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:33:13] binding parameter [1] as [VARCHAR] - [A green lego set]
+[14:33:13] binding parameter [2] as [VARCHAR] - [Lego]
+[14:33:13] binding parameter [3] as [INTEGER] - [40]
+[14:33:13] binding parameter [4] as [INTEGER] - [4]
+[14:33:13] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:33:13] binding parameter [1] as [VARCHAR] - [A red plane]
+[14:33:13] binding parameter [2] as [VARCHAR] - [Plane]
+[14:33:13] binding parameter [3] as [INTEGER] - [50]
+[14:33:13] binding parameter [4] as [INTEGER] - [5]
+[14:33:13] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:33:13] binding parameter [1] as [VARCHAR] - [Red]
+[14:33:13] binding parameter [2] as [INTEGER] - [6]
+[14:33:13] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:33:13] binding parameter [1] as [VARCHAR] - [Green]
+[14:33:13] binding parameter [2] as [INTEGER] - [7]
+[14:33:13] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:33:13] binding parameter [1] as [VARCHAR] - [White]
+[14:33:13] binding parameter [2] as [INTEGER] - [8]
+[14:33:13] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:33:13] binding parameter [1] as [VARCHAR] - [Black]
+[14:33:13] binding parameter [2] as [INTEGER] - [9]
+[14:33:13] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:33:13] binding parameter [1] as [VARCHAR] - [Yellow]
+[14:33:13] binding parameter [2] as [INTEGER] - [10]
+[14:33:13] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:33:13] binding parameter [1] as [VARCHAR] - [Blue]
+[14:33:13] binding parameter [2] as [INTEGER] - [11]
+[14:44:46] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[14:44:48] 
+    drop table if exists colors cascade
+[14:44:48] 
+    drop table if exists products cascade
+[14:44:48] 
+    drop table if exists test cascade
+[14:44:48] 
+    drop sequence hibernate_sequence
+[14:44:48] create sequence hibernate_sequence start 1 increment 1
+[14:44:48] 
+    create table colors (
+        id int4 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[14:44:48] 
+    create table products (
+        id int4 not null,
+        description varchar(255),
+        name varchar(255),
+        stock int4,
+        primary key (id)
+    )
+[14:44:48] 
+    create table test (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[14:44:48] 
+    alter table test 
+        add constraint UK_1chowmbf27f0cbp7on9ysvhjo unique (name)
+[14:44:48] 
+    select
+        nextval ('hibernate_sequence')
+[14:44:48] 
+    select
+        nextval ('hibernate_sequence')
+[14:44:48] 
+    select
+        nextval ('hibernate_sequence')
+[14:44:48] 
+    select
+        nextval ('hibernate_sequence')
+[14:44:48] 
+    select
+        nextval ('hibernate_sequence')
+[14:44:48] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:44:48] binding parameter [1] as [VARCHAR] - [A blue plane]
+[14:44:48] binding parameter [2] as [VARCHAR] - [Plane]
+[14:44:48] binding parameter [3] as [INTEGER] - [10]
+[14:44:48] binding parameter [4] as [INTEGER] - [1]
+[14:44:48] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:44:48] binding parameter [1] as [VARCHAR] - [A red car]
+[14:44:48] binding parameter [2] as [VARCHAR] - [Car]
+[14:44:48] binding parameter [3] as [INTEGER] - [20]
+[14:44:48] binding parameter [4] as [INTEGER] - [2]
+[14:44:48] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:44:48] binding parameter [1] as [VARCHAR] - [A black doll]
+[14:44:48] binding parameter [2] as [VARCHAR] - [Doll]
+[14:44:48] binding parameter [3] as [INTEGER] - [30]
+[14:44:48] binding parameter [4] as [INTEGER] - [3]
+[14:44:49] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:44:49] binding parameter [1] as [VARCHAR] - [A green lego set]
+[14:44:49] binding parameter [2] as [VARCHAR] - [Lego]
+[14:44:49] binding parameter [3] as [INTEGER] - [40]
+[14:44:49] binding parameter [4] as [INTEGER] - [4]
+[14:44:49] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:44:49] binding parameter [1] as [VARCHAR] - [A red plane]
+[14:44:49] binding parameter [2] as [VARCHAR] - [Plane]
+[14:44:49] binding parameter [3] as [INTEGER] - [50]
+[14:44:49] binding parameter [4] as [INTEGER] - [5]
+[14:44:49] 
+    select
+        nextval ('hibernate_sequence')
+[14:44:49] 
+    select
+        nextval ('hibernate_sequence')
+[14:44:49] 
+    select
+        nextval ('hibernate_sequence')
+[14:44:49] 
+    select
+        nextval ('hibernate_sequence')
+[14:44:49] 
+    select
+        nextval ('hibernate_sequence')
+[14:44:49] 
+    select
+        nextval ('hibernate_sequence')
+[14:44:49] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:44:49] binding parameter [1] as [VARCHAR] - [Red]
+[14:44:49] binding parameter [2] as [INTEGER] - [6]
+[14:44:49] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:44:49] binding parameter [1] as [VARCHAR] - [Green]
+[14:44:49] binding parameter [2] as [INTEGER] - [7]
+[14:44:49] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:44:49] binding parameter [1] as [VARCHAR] - [White]
+[14:44:49] binding parameter [2] as [INTEGER] - [8]
+[14:44:49] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:44:49] binding parameter [1] as [VARCHAR] - [Black]
+[14:44:49] binding parameter [2] as [INTEGER] - [9]
+[14:44:49] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:44:49] binding parameter [1] as [VARCHAR] - [Yellow]
+[14:44:49] binding parameter [2] as [INTEGER] - [10]
+[14:44:49] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:44:49] binding parameter [1] as [VARCHAR] - [Blue]
+[14:44:49] binding parameter [2] as [INTEGER] - [11]
+[14:45:16] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[14:45:18] 
+    drop table if exists colors cascade
+[14:45:18] 
+    drop table if exists products cascade
+[14:45:18] 
+    drop table if exists test cascade
+[14:45:18] 
+    drop sequence hibernate_sequence
+[14:45:18] create sequence hibernate_sequence start 1 increment 1
+[14:45:18] 
+    create table colors (
+        id int4 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[14:45:18] 
+    create table products (
+        id int4 not null,
+        description varchar(255),
+        name varchar(255),
+        stock int4,
+        primary key (id)
+    )
+[14:45:18] 
+    create table test (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[14:45:18] 
+    alter table test 
+        add constraint UK_1chowmbf27f0cbp7on9ysvhjo unique (name)
+[14:45:18] 
+    select
+        nextval ('hibernate_sequence')
+[14:45:18] 
+    select
+        nextval ('hibernate_sequence')
+[14:45:18] 
+    select
+        nextval ('hibernate_sequence')
+[14:45:18] 
+    select
+        nextval ('hibernate_sequence')
+[14:45:18] 
+    select
+        nextval ('hibernate_sequence')
+[14:45:18] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:45:18] binding parameter [1] as [VARCHAR] - [A blue plane]
+[14:45:18] binding parameter [2] as [VARCHAR] - [Plane]
+[14:45:18] binding parameter [3] as [INTEGER] - [10]
+[14:45:18] binding parameter [4] as [INTEGER] - [1]
+[14:45:18] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:45:18] binding parameter [1] as [VARCHAR] - [A red car]
+[14:45:18] binding parameter [2] as [VARCHAR] - [Car]
+[14:45:18] binding parameter [3] as [INTEGER] - [20]
+[14:45:18] binding parameter [4] as [INTEGER] - [2]
+[14:45:18] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:45:18] binding parameter [1] as [VARCHAR] - [A black doll]
+[14:45:18] binding parameter [2] as [VARCHAR] - [Doll]
+[14:45:18] binding parameter [3] as [INTEGER] - [30]
+[14:45:18] binding parameter [4] as [INTEGER] - [3]
+[14:45:18] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:45:18] binding parameter [1] as [VARCHAR] - [A green lego set]
+[14:45:18] binding parameter [2] as [VARCHAR] - [Lego]
+[14:45:18] binding parameter [3] as [INTEGER] - [40]
+[14:45:18] binding parameter [4] as [INTEGER] - [4]
+[14:45:18] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:45:18] binding parameter [1] as [VARCHAR] - [A red plane]
+[14:45:18] binding parameter [2] as [VARCHAR] - [Plane]
+[14:45:18] binding parameter [3] as [INTEGER] - [50]
+[14:45:18] binding parameter [4] as [INTEGER] - [5]
+[14:45:18] 
+    select
+        nextval ('hibernate_sequence')
+[14:45:18] 
+    select
+        nextval ('hibernate_sequence')
+[14:45:18] 
+    select
+        nextval ('hibernate_sequence')
+[14:45:18] 
+    select
+        nextval ('hibernate_sequence')
+[14:45:18] 
+    select
+        nextval ('hibernate_sequence')
+[14:45:18] 
+    select
+        nextval ('hibernate_sequence')
+[14:45:18] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:45:18] binding parameter [1] as [VARCHAR] - [Red]
+[14:45:18] binding parameter [2] as [INTEGER] - [6]
+[14:45:18] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:45:18] binding parameter [1] as [VARCHAR] - [Green]
+[14:45:18] binding parameter [2] as [INTEGER] - [7]
+[14:45:18] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:45:18] binding parameter [1] as [VARCHAR] - [White]
+[14:45:18] binding parameter [2] as [INTEGER] - [8]
+[14:45:18] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:45:18] binding parameter [1] as [VARCHAR] - [Black]
+[14:45:18] binding parameter [2] as [INTEGER] - [9]
+[14:45:18] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:45:18] binding parameter [1] as [VARCHAR] - [Yellow]
+[14:45:18] binding parameter [2] as [INTEGER] - [10]
+[14:45:18] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:45:18] binding parameter [1] as [VARCHAR] - [Blue]
+[14:45:18] binding parameter [2] as [INTEGER] - [11]
+[14:45:29] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[14:45:31] 
+    drop table if exists colors cascade
+[14:45:31] 
+    drop table if exists products cascade
+[14:45:31] 
+    drop table if exists test cascade
+[14:45:31] 
+    drop sequence hibernate_sequence
+[14:45:31] create sequence hibernate_sequence start 1 increment 1
+[14:45:31] 
+    create table colors (
+        id int4 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[14:45:31] 
+    create table products (
+        id int4 not null,
+        description varchar(255),
+        name varchar(255),
+        stock int4,
+        primary key (id)
+    )
+[14:45:31] 
+    create table test (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[14:45:31] 
+    alter table test 
+        add constraint UK_1chowmbf27f0cbp7on9ysvhjo unique (name)
+[14:45:31] 
+    select
+        nextval ('hibernate_sequence')
+[14:45:31] 
+    select
+        nextval ('hibernate_sequence')
+[14:45:31] 
+    select
+        nextval ('hibernate_sequence')
+[14:45:31] 
+    select
+        nextval ('hibernate_sequence')
+[14:45:31] 
+    select
+        nextval ('hibernate_sequence')
+[14:45:31] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:45:31] binding parameter [1] as [VARCHAR] - [A blue plane]
+[14:45:31] binding parameter [2] as [VARCHAR] - [Plane]
+[14:45:31] binding parameter [3] as [INTEGER] - [10]
+[14:45:31] binding parameter [4] as [INTEGER] - [1]
+[14:45:31] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:45:31] binding parameter [1] as [VARCHAR] - [A red car]
+[14:45:31] binding parameter [2] as [VARCHAR] - [Car]
+[14:45:31] binding parameter [3] as [INTEGER] - [20]
+[14:45:31] binding parameter [4] as [INTEGER] - [2]
+[14:45:31] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:45:31] binding parameter [1] as [VARCHAR] - [A black doll]
+[14:45:31] binding parameter [2] as [VARCHAR] - [Doll]
+[14:45:31] binding parameter [3] as [INTEGER] - [30]
+[14:45:31] binding parameter [4] as [INTEGER] - [3]
+[14:45:31] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:45:31] binding parameter [1] as [VARCHAR] - [A green lego set]
+[14:45:31] binding parameter [2] as [VARCHAR] - [Lego]
+[14:45:31] binding parameter [3] as [INTEGER] - [40]
+[14:45:31] binding parameter [4] as [INTEGER] - [4]
+[14:45:31] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:45:31] binding parameter [1] as [VARCHAR] - [A red plane]
+[14:45:31] binding parameter [2] as [VARCHAR] - [Plane]
+[14:45:31] binding parameter [3] as [INTEGER] - [50]
+[14:45:31] binding parameter [4] as [INTEGER] - [5]
+[14:45:31] 
+    select
+        nextval ('hibernate_sequence')
+[14:45:31] 
+    select
+        nextval ('hibernate_sequence')
+[14:45:31] 
+    select
+        nextval ('hibernate_sequence')
+[14:45:31] 
+    select
+        nextval ('hibernate_sequence')
+[14:45:31] 
+    select
+        nextval ('hibernate_sequence')
+[14:45:31] 
+    select
+        nextval ('hibernate_sequence')
+[14:45:31] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:45:31] binding parameter [1] as [VARCHAR] - [Red]
+[14:45:31] binding parameter [2] as [INTEGER] - [6]
+[14:45:31] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:45:31] binding parameter [1] as [VARCHAR] - [Green]
+[14:45:31] binding parameter [2] as [INTEGER] - [7]
+[14:45:31] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:45:31] binding parameter [1] as [VARCHAR] - [White]
+[14:45:31] binding parameter [2] as [INTEGER] - [8]
+[14:45:31] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:45:31] binding parameter [1] as [VARCHAR] - [Black]
+[14:45:31] binding parameter [2] as [INTEGER] - [9]
+[14:45:31] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:45:31] binding parameter [1] as [VARCHAR] - [Yellow]
+[14:45:31] binding parameter [2] as [INTEGER] - [10]
+[14:45:31] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:45:31] binding parameter [1] as [VARCHAR] - [Blue]
+[14:45:31] binding parameter [2] as [INTEGER] - [11]
+[14:45:47] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[14:45:49] 
+    drop table if exists colors cascade
+[14:45:49] 
+    drop table if exists products cascade
+[14:45:49] 
+    drop table if exists test cascade
+[14:45:49] 
+    drop sequence hibernate_sequence
+[14:45:49] create sequence hibernate_sequence start 1 increment 1
+[14:45:49] 
+    create table colors (
+        id int4 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[14:45:49] 
+    create table products (
+        id int4 not null,
+        description varchar(255),
+        name varchar(255),
+        stock int4,
+        primary key (id)
+    )
+[14:45:49] 
+    create table test (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[14:45:49] 
+    alter table test 
+        add constraint UK_1chowmbf27f0cbp7on9ysvhjo unique (name)
+[14:45:50] 
+    select
+        nextval ('hibernate_sequence')
+[14:45:50] 
+    select
+        nextval ('hibernate_sequence')
+[14:45:50] 
+    select
+        nextval ('hibernate_sequence')
+[14:45:50] 
+    select
+        nextval ('hibernate_sequence')
+[14:45:50] 
+    select
+        nextval ('hibernate_sequence')
+[14:45:50] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:45:50] binding parameter [1] as [VARCHAR] - [A blue plane]
+[14:45:50] binding parameter [2] as [VARCHAR] - [Plane]
+[14:45:50] binding parameter [3] as [INTEGER] - [10]
+[14:45:50] binding parameter [4] as [INTEGER] - [1]
+[14:45:50] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:45:50] binding parameter [1] as [VARCHAR] - [A red car]
+[14:45:50] binding parameter [2] as [VARCHAR] - [Car]
+[14:45:50] binding parameter [3] as [INTEGER] - [20]
+[14:45:50] binding parameter [4] as [INTEGER] - [2]
+[14:45:50] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:45:50] binding parameter [1] as [VARCHAR] - [A black doll]
+[14:45:50] binding parameter [2] as [VARCHAR] - [Doll]
+[14:45:50] binding parameter [3] as [INTEGER] - [30]
+[14:45:50] binding parameter [4] as [INTEGER] - [3]
+[14:45:50] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:45:50] binding parameter [1] as [VARCHAR] - [A green lego set]
+[14:45:50] binding parameter [2] as [VARCHAR] - [Lego]
+[14:45:50] binding parameter [3] as [INTEGER] - [40]
+[14:45:50] binding parameter [4] as [INTEGER] - [4]
+[14:45:50] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:45:50] binding parameter [1] as [VARCHAR] - [A red plane]
+[14:45:50] binding parameter [2] as [VARCHAR] - [Plane]
+[14:45:50] binding parameter [3] as [INTEGER] - [50]
+[14:45:50] binding parameter [4] as [INTEGER] - [5]
+[14:45:50] 
+    select
+        nextval ('hibernate_sequence')
+[14:45:50] 
+    select
+        nextval ('hibernate_sequence')
+[14:45:50] 
+    select
+        nextval ('hibernate_sequence')
+[14:45:50] 
+    select
+        nextval ('hibernate_sequence')
+[14:45:50] 
+    select
+        nextval ('hibernate_sequence')
+[14:45:50] 
+    select
+        nextval ('hibernate_sequence')
+[14:45:50] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:45:50] binding parameter [1] as [VARCHAR] - [Red]
+[14:45:50] binding parameter [2] as [INTEGER] - [6]
+[14:45:50] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:45:50] binding parameter [1] as [VARCHAR] - [Green]
+[14:45:50] binding parameter [2] as [INTEGER] - [7]
+[14:45:50] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:45:50] binding parameter [1] as [VARCHAR] - [White]
+[14:45:50] binding parameter [2] as [INTEGER] - [8]
+[14:45:50] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:45:50] binding parameter [1] as [VARCHAR] - [Black]
+[14:45:50] binding parameter [2] as [INTEGER] - [9]
+[14:45:50] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:45:50] binding parameter [1] as [VARCHAR] - [Yellow]
+[14:45:50] binding parameter [2] as [INTEGER] - [10]
+[14:45:50] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:45:50] binding parameter [1] as [VARCHAR] - [Blue]
+[14:45:50] binding parameter [2] as [INTEGER] - [11]
+[14:47:36] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[14:47:38] 
+    drop table if exists colors cascade
+[14:47:38] 
+    drop table if exists products cascade
+[14:47:38] 
+    drop table if exists test cascade
+[14:47:38] 
+    drop sequence hibernate_sequence
+[14:47:38] create sequence hibernate_sequence start 1 increment 1
+[14:47:38] 
+    create table colors (
+        id int4 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[14:47:38] 
+    create table products (
+        id int4 not null,
+        description varchar(255),
+        name varchar(255),
+        stock int4,
+        primary key (id)
+    )
+[14:47:38] 
+    create table test (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[14:47:38] 
+    alter table test 
+        add constraint UK_1chowmbf27f0cbp7on9ysvhjo unique (name)
+[14:47:39] 
+    select
+        nextval ('hibernate_sequence')
+[14:47:39] 
+    select
+        nextval ('hibernate_sequence')
+[14:47:39] 
+    select
+        nextval ('hibernate_sequence')
+[14:47:39] 
+    select
+        nextval ('hibernate_sequence')
+[14:47:39] 
+    select
+        nextval ('hibernate_sequence')
+[14:47:39] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:47:39] binding parameter [1] as [VARCHAR] - [A blue plane]
+[14:47:39] binding parameter [2] as [VARCHAR] - [Plane]
+[14:47:39] binding parameter [3] as [INTEGER] - [10]
+[14:47:39] binding parameter [4] as [INTEGER] - [1]
+[14:47:39] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:47:39] binding parameter [1] as [VARCHAR] - [A red car]
+[14:47:39] binding parameter [2] as [VARCHAR] - [Car]
+[14:47:39] binding parameter [3] as [INTEGER] - [20]
+[14:47:39] binding parameter [4] as [INTEGER] - [2]
+[14:47:39] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:47:39] binding parameter [1] as [VARCHAR] - [A black doll]
+[14:47:39] binding parameter [2] as [VARCHAR] - [Doll]
+[14:47:39] binding parameter [3] as [INTEGER] - [30]
+[14:47:39] binding parameter [4] as [INTEGER] - [3]
+[14:47:39] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:47:39] binding parameter [1] as [VARCHAR] - [A green lego set]
+[14:47:39] binding parameter [2] as [VARCHAR] - [Lego]
+[14:47:39] binding parameter [3] as [INTEGER] - [40]
+[14:47:39] binding parameter [4] as [INTEGER] - [4]
+[14:47:39] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock, id) 
+        values
+            (?, ?, ?, ?)
+[14:47:39] binding parameter [1] as [VARCHAR] - [A red plane]
+[14:47:39] binding parameter [2] as [VARCHAR] - [Plane]
+[14:47:39] binding parameter [3] as [INTEGER] - [50]
+[14:47:39] binding parameter [4] as [INTEGER] - [5]
+[14:47:39] 
+    select
+        nextval ('hibernate_sequence')
+[14:47:39] 
+    select
+        nextval ('hibernate_sequence')
+[14:47:39] 
+    select
+        nextval ('hibernate_sequence')
+[14:47:39] 
+    select
+        nextval ('hibernate_sequence')
+[14:47:39] 
+    select
+        nextval ('hibernate_sequence')
+[14:47:39] 
+    select
+        nextval ('hibernate_sequence')
+[14:47:39] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:47:39] binding parameter [1] as [VARCHAR] - [Red]
+[14:47:39] binding parameter [2] as [INTEGER] - [6]
+[14:47:39] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:47:39] binding parameter [1] as [VARCHAR] - [Green]
+[14:47:39] binding parameter [2] as [INTEGER] - [7]
+[14:47:39] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:47:39] binding parameter [1] as [VARCHAR] - [White]
+[14:47:39] binding parameter [2] as [INTEGER] - [8]
+[14:47:39] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:47:39] binding parameter [1] as [VARCHAR] - [Black]
+[14:47:39] binding parameter [2] as [INTEGER] - [9]
+[14:47:39] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:47:39] binding parameter [1] as [VARCHAR] - [Yellow]
+[14:47:39] binding parameter [2] as [INTEGER] - [10]
+[14:47:39] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name, id) 
+        values
+            (?, ?)
+[14:47:39] binding parameter [1] as [VARCHAR] - [Blue]
+[14:47:39] binding parameter [2] as [INTEGER] - [11]
+[14:48:05] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[14:48:07] 
+    drop table if exists colors cascade
+[14:48:07] 
+    drop table if exists products cascade
+[14:48:07] 
+    drop table if exists test cascade
+[14:48:07] 
+    drop sequence hibernate_sequence
+[14:48:07] create sequence hibernate_sequence start 1 increment 1
+[14:48:07] 
+    create table colors (
+        id  serial not null,
+        name varchar(255),
+        primary key (id)
+    )
+[14:48:07] 
+    create table products (
+        id  serial not null,
+        description varchar(255),
+        name varchar(255),
+        stock int4,
+        primary key (id)
+    )
+[14:48:07] 
+    create table test (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[14:48:07] 
+    alter table test 
+        add constraint UK_1chowmbf27f0cbp7on9ysvhjo unique (name)
+[14:48:07] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock) 
+        values
+            (?, ?, ?)
+[14:48:07] binding parameter [1] as [VARCHAR] - [A blue plane]
+[14:48:07] binding parameter [2] as [VARCHAR] - [Plane]
+[14:48:07] binding parameter [3] as [INTEGER] - [10]
+[14:48:07] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock) 
+        values
+            (?, ?, ?)
+[14:48:07] binding parameter [1] as [VARCHAR] - [A red car]
+[14:48:07] binding parameter [2] as [VARCHAR] - [Car]
+[14:48:07] binding parameter [3] as [INTEGER] - [20]
+[14:48:07] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock) 
+        values
+            (?, ?, ?)
+[14:48:07] binding parameter [1] as [VARCHAR] - [A black doll]
+[14:48:07] binding parameter [2] as [VARCHAR] - [Doll]
+[14:48:07] binding parameter [3] as [INTEGER] - [30]
+[14:48:07] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock) 
+        values
+            (?, ?, ?)
+[14:48:07] binding parameter [1] as [VARCHAR] - [A green lego set]
+[14:48:07] binding parameter [2] as [VARCHAR] - [Lego]
+[14:48:07] binding parameter [3] as [INTEGER] - [40]
+[14:48:07] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock) 
+        values
+            (?, ?, ?)
+[14:48:07] binding parameter [1] as [VARCHAR] - [A red plane]
+[14:48:07] binding parameter [2] as [VARCHAR] - [Plane]
+[14:48:07] binding parameter [3] as [INTEGER] - [50]
+[14:48:07] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[14:48:07] binding parameter [1] as [VARCHAR] - [Red]
+[14:48:07] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[14:48:07] binding parameter [1] as [VARCHAR] - [Green]
+[14:48:07] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[14:48:07] binding parameter [1] as [VARCHAR] - [White]
+[14:48:07] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[14:48:07] binding parameter [1] as [VARCHAR] - [Black]
+[14:48:07] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[14:48:07] binding parameter [1] as [VARCHAR] - [Yellow]
+[14:48:07] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[14:48:07] binding parameter [1] as [VARCHAR] - [Blue]
+[15:44:24] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[15:44:26] 
+    drop table if exists colors cascade
+[15:44:26] 
+    drop table if exists productcolors cascade
+[15:44:26] 
+    drop table if exists products cascade
+[15:44:26] 
+    drop table if exists test cascade
+[15:44:26] 
+    drop sequence hibernate_sequence
+[15:44:26] create sequence hibernate_sequence start 1 increment 1
+[15:44:26] 
+    create table colors (
+        id  serial not null,
+        name varchar(255),
+        primary key (id)
+    )
+[15:44:26] 
+    create table productcolors (
+        id  serial not null,
+        colorId int4 not null,
+        productId int4 not null,
+        primary key (id)
+    )
+[15:44:26] 
+    create table products (
+        id  serial not null,
+        description varchar(255),
+        name varchar(255),
+        stock int4,
+        primary key (id)
+    )
+[15:44:26] 
+    create table test (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[15:44:26] 
+    alter table test 
+        add constraint UK_1chowmbf27f0cbp7on9ysvhjo unique (name)
+[15:44:26] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock) 
+        values
+            (?, ?, ?)
+[15:44:26] binding parameter [1] as [VARCHAR] - [A blue plane]
+[15:44:26] binding parameter [2] as [VARCHAR] - [Plane]
+[15:44:26] binding parameter [3] as [INTEGER] - [10]
+[15:44:26] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock) 
+        values
+            (?, ?, ?)
+[15:44:26] binding parameter [1] as [VARCHAR] - [A red car]
+[15:44:26] binding parameter [2] as [VARCHAR] - [Car]
+[15:44:26] binding parameter [3] as [INTEGER] - [20]
+[15:44:26] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock) 
+        values
+            (?, ?, ?)
+[15:44:26] binding parameter [1] as [VARCHAR] - [A black doll]
+[15:44:26] binding parameter [2] as [VARCHAR] - [Doll]
+[15:44:26] binding parameter [3] as [INTEGER] - [30]
+[15:44:26] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock) 
+        values
+            (?, ?, ?)
+[15:44:26] binding parameter [1] as [VARCHAR] - [A green lego set]
+[15:44:26] binding parameter [2] as [VARCHAR] - [Lego]
+[15:44:26] binding parameter [3] as [INTEGER] - [40]
+[15:44:26] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock) 
+        values
+            (?, ?, ?)
+[15:44:26] binding parameter [1] as [VARCHAR] - [A red plane]
+[15:44:26] binding parameter [2] as [VARCHAR] - [Plane]
+[15:44:26] binding parameter [3] as [INTEGER] - [50]
+[15:44:26] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[15:44:26] binding parameter [1] as [VARCHAR] - [Red]
+[15:44:26] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[15:44:26] binding parameter [1] as [VARCHAR] - [Green]
+[15:44:26] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[15:44:26] binding parameter [1] as [VARCHAR] - [White]
+[15:44:26] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[15:44:26] binding parameter [1] as [VARCHAR] - [Black]
+[15:44:26] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[15:44:26] binding parameter [1] as [VARCHAR] - [Yellow]
+[15:44:26] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[15:44:26] binding parameter [1] as [VARCHAR] - [Blue]
+[15:44:26] 
+    /* insert model.ProductColor
+        */ insert 
+        into
+            productcolors
+            (colorId, productId) 
+        values
+            (?, ?)
+[15:44:26] binding parameter [1] as [INTEGER] - [2]
+[15:44:26] binding parameter [2] as [INTEGER] - [1]
+[15:44:26] 
+    /* insert model.ProductColor
+        */ insert 
+        into
+            productcolors
+            (colorId, productId) 
+        values
+            (?, ?)
+[15:44:26] binding parameter [1] as [INTEGER] - [4]
+[15:44:26] binding parameter [2] as [INTEGER] - [2]
+[15:44:26] 
+    /* insert model.ProductColor
+        */ insert 
+        into
+            productcolors
+            (colorId, productId) 
+        values
+            (?, ?)
+[15:44:26] binding parameter [1] as [INTEGER] - [3]
+[15:44:26] binding parameter [2] as [INTEGER] - [3]
+[15:44:26] 
+    /* insert model.ProductColor
+        */ insert 
+        into
+            productcolors
+            (colorId, productId) 
+        values
+            (?, ?)
+[15:44:26] binding parameter [1] as [INTEGER] - [5]
+[15:44:26] binding parameter [2] as [INTEGER] - [4]
+[15:44:26] 
+    /* insert model.ProductColor
+        */ insert 
+        into
+            productcolors
+            (colorId, productId) 
+        values
+            (?, ?)
+[15:44:26] binding parameter [1] as [INTEGER] - [1]
+[15:44:26] binding parameter [2] as [INTEGER] - [5]
+[15:44:26] cannot commit transaction
+org.hibernate.MappingException: Unknown entity: model.Price
+	at org.hibernate.internal.SessionFactoryImpl.getEntityPersister(SessionFactoryImpl.java:776)
+	at org.hibernate.internal.SessionImpl.getEntityPersister(SessionImpl.java:1542)
+	at org.hibernate.engine.internal.ForeignKeys.isTransient(ForeignKeys.java:225)
+	at org.hibernate.event.internal.AbstractSaveEventListener.getEntityState(AbstractSaveEventListener.java:499)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:99)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:58)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:778)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:751)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:756)
+	at tablePopulators.PricePopulator.populate(PricePopulator.java:9)
+	at DbPopulator.main(DbPopulator.java:103)
+[15:44:43] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[15:44:45] 
+    drop table if exists colors cascade
+[15:44:45] 
+    drop table if exists prices cascade
+[15:44:45] 
+    drop table if exists productcolors cascade
+[15:44:45] 
+    drop table if exists products cascade
+[15:44:45] 
+    drop table if exists test cascade
+[15:44:45] 
+    drop sequence hibernate_sequence
+[15:44:46] create sequence hibernate_sequence start 1 increment 1
+[15:44:46] 
+    create table colors (
+        id  serial not null,
+        name varchar(255),
+        primary key (id)
+    )
+[15:44:46] 
+    create table prices (
+        id  serial not null,
+        currency varchar(255),
+        price float8,
+        productid int4 not null,
+        vat int4,
+        primary key (id)
+    )
+[15:44:46] 
+    create table productcolors (
+        id  serial not null,
+        colorId int4 not null,
+        productId int4 not null,
+        primary key (id)
+    )
+[15:44:46] 
+    create table products (
+        id  serial not null,
+        description varchar(255),
+        name varchar(255),
+        stock int4,
+        primary key (id)
+    )
+[15:44:46] 
+    create table test (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[15:44:46] 
+    alter table test 
+        add constraint UK_1chowmbf27f0cbp7on9ysvhjo unique (name)
+[15:44:46] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock) 
+        values
+            (?, ?, ?)
+[15:44:46] binding parameter [1] as [VARCHAR] - [A blue plane]
+[15:44:46] binding parameter [2] as [VARCHAR] - [Plane]
+[15:44:46] binding parameter [3] as [INTEGER] - [10]
+[15:44:46] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock) 
+        values
+            (?, ?, ?)
+[15:44:46] binding parameter [1] as [VARCHAR] - [A red car]
+[15:44:46] binding parameter [2] as [VARCHAR] - [Car]
+[15:44:46] binding parameter [3] as [INTEGER] - [20]
+[15:44:46] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock) 
+        values
+            (?, ?, ?)
+[15:44:46] binding parameter [1] as [VARCHAR] - [A black doll]
+[15:44:46] binding parameter [2] as [VARCHAR] - [Doll]
+[15:44:46] binding parameter [3] as [INTEGER] - [30]
+[15:44:46] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock) 
+        values
+            (?, ?, ?)
+[15:44:46] binding parameter [1] as [VARCHAR] - [A green lego set]
+[15:44:46] binding parameter [2] as [VARCHAR] - [Lego]
+[15:44:46] binding parameter [3] as [INTEGER] - [40]
+[15:44:46] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock) 
+        values
+            (?, ?, ?)
+[15:44:46] binding parameter [1] as [VARCHAR] - [A red plane]
+[15:44:46] binding parameter [2] as [VARCHAR] - [Plane]
+[15:44:46] binding parameter [3] as [INTEGER] - [50]
+[15:44:46] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[15:44:46] binding parameter [1] as [VARCHAR] - [Red]
+[15:44:46] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[15:44:46] binding parameter [1] as [VARCHAR] - [Green]
+[15:44:46] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[15:44:46] binding parameter [1] as [VARCHAR] - [White]
+[15:44:46] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[15:44:46] binding parameter [1] as [VARCHAR] - [Black]
+[15:44:46] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[15:44:46] binding parameter [1] as [VARCHAR] - [Yellow]
+[15:44:46] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[15:44:46] binding parameter [1] as [VARCHAR] - [Blue]
+[15:44:46] 
+    /* insert model.ProductColor
+        */ insert 
+        into
+            productcolors
+            (colorId, productId) 
+        values
+            (?, ?)
+[15:44:46] binding parameter [1] as [INTEGER] - [2]
+[15:44:46] binding parameter [2] as [INTEGER] - [1]
+[15:44:46] 
+    /* insert model.ProductColor
+        */ insert 
+        into
+            productcolors
+            (colorId, productId) 
+        values
+            (?, ?)
+[15:44:46] binding parameter [1] as [INTEGER] - [4]
+[15:44:46] binding parameter [2] as [INTEGER] - [2]
+[15:44:46] 
+    /* insert model.ProductColor
+        */ insert 
+        into
+            productcolors
+            (colorId, productId) 
+        values
+            (?, ?)
+[15:44:46] binding parameter [1] as [INTEGER] - [3]
+[15:44:46] binding parameter [2] as [INTEGER] - [3]
+[15:44:46] 
+    /* insert model.ProductColor
+        */ insert 
+        into
+            productcolors
+            (colorId, productId) 
+        values
+            (?, ?)
+[15:44:46] binding parameter [1] as [INTEGER] - [5]
+[15:44:46] binding parameter [2] as [INTEGER] - [4]
+[15:44:46] 
+    /* insert model.ProductColor
+        */ insert 
+        into
+            productcolors
+            (colorId, productId) 
+        values
+            (?, ?)
+[15:44:46] binding parameter [1] as [INTEGER] - [1]
+[15:44:46] binding parameter [2] as [INTEGER] - [5]
+[15:44:46] 
+    /* insert model.Price
+        */ insert 
+        into
+            prices
+            (currency, price, productid, vat) 
+        values
+            (?, ?, ?, ?)
+[15:44:46] binding parameter [1] as [VARCHAR] - [EURO]
+[15:44:46] binding parameter [2] as [DOUBLE] - [10.0]
+[15:44:46] binding parameter [3] as [INTEGER] - [1]
+[15:44:46] binding parameter [4] as [INTEGER] - [0]
+[15:44:46] 
+    /* insert model.Price
+        */ insert 
+        into
+            prices
+            (currency, price, productid, vat) 
+        values
+            (?, ?, ?, ?)
+[15:44:46] binding parameter [1] as [VARCHAR] - [RON]
+[15:44:46] binding parameter [2] as [DOUBLE] - [50.0]
+[15:44:46] binding parameter [3] as [INTEGER] - [2]
+[15:44:46] binding parameter [4] as [INTEGER] - [17]
+[15:44:46] 
+    /* insert model.Price
+        */ insert 
+        into
+            prices
+            (currency, price, productid, vat) 
+        values
+            (?, ?, ?, ?)
+[15:44:46] binding parameter [1] as [VARCHAR] - [USD]
+[15:44:46] binding parameter [2] as [DOUBLE] - [20.0]
+[15:44:46] binding parameter [3] as [INTEGER] - [3]
+[15:44:46] binding parameter [4] as [INTEGER] - [0]
+[15:44:46] 
+    /* insert model.Price
+        */ insert 
+        into
+            prices
+            (currency, price, productid, vat) 
+        values
+            (?, ?, ?, ?)
+[15:44:46] binding parameter [1] as [VARCHAR] - [PESOS]
+[15:44:46] binding parameter [2] as [DOUBLE] - [40.0]
+[15:44:46] binding parameter [3] as [INTEGER] - [4]
+[15:44:46] binding parameter [4] as [INTEGER] - [0]
+[15:44:46] 
+    /* insert model.Price
+        */ insert 
+        into
+            prices
+            (currency, price, productid, vat) 
+        values
+            (?, ?, ?, ?)
+[15:44:46] binding parameter [1] as [VARCHAR] - [RON]
+[15:44:46] binding parameter [2] as [DOUBLE] - [53.0]
+[15:44:46] binding parameter [3] as [INTEGER] - [5]
+[15:44:46] binding parameter [4] as [INTEGER] - [17]
+[17:19:08] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[17:19:10] 
+    drop table if exists colors cascade
+[17:19:10] 
+    drop table if exists prices cascade
+[17:19:10] 
+    drop table if exists productcolors cascade
+[17:19:10] 
+    drop table if exists products cascade
+[17:19:10] 
+    drop table if exists test cascade
+[17:19:10] 
+    drop sequence hibernate_sequence
+[17:19:10] create sequence hibernate_sequence start 1 increment 1
+[17:19:10] 
+    create table colors (
+        id  serial not null,
+        name varchar(255),
+        primary key (id)
+    )
+[17:19:10] 
+    create table prices (
+        id  serial not null,
+        currency varchar(255),
+        price float8,
+        productid int4 not null,
+        vat int4,
+        primary key (id)
+    )
+[17:19:10] 
+    create table productcolors (
+        id  serial not null,
+        colorId int4 not null,
+        productId int4 not null,
+        primary key (id)
+    )
+[17:19:10] 
+    create table products (
+        id  serial not null,
+        description varchar(255),
+        name varchar(255),
+        stock int4,
+        primary key (id)
+    )
+[17:19:10] 
+    create table test (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[17:19:11] 
+    alter table test 
+        add constraint UK_1chowmbf27f0cbp7on9ysvhjo unique (name)
+[17:19:11] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock) 
+        values
+            (?, ?, ?)
+[17:19:11] binding parameter [1] as [VARCHAR] - [A blue plane]
+[17:19:11] binding parameter [2] as [VARCHAR] - [Plane]
+[17:19:11] binding parameter [3] as [INTEGER] - [10]
+[17:19:11] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock) 
+        values
+            (?, ?, ?)
+[17:19:11] binding parameter [1] as [VARCHAR] - [A red car]
+[17:19:11] binding parameter [2] as [VARCHAR] - [Car]
+[17:19:11] binding parameter [3] as [INTEGER] - [20]
+[17:19:11] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock) 
+        values
+            (?, ?, ?)
+[17:19:11] binding parameter [1] as [VARCHAR] - [A black doll]
+[17:19:11] binding parameter [2] as [VARCHAR] - [Doll]
+[17:19:11] binding parameter [3] as [INTEGER] - [30]
+[17:19:11] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock) 
+        values
+            (?, ?, ?)
+[17:19:11] binding parameter [1] as [VARCHAR] - [A green lego set]
+[17:19:11] binding parameter [2] as [VARCHAR] - [Lego]
+[17:19:11] binding parameter [3] as [INTEGER] - [40]
+[17:19:11] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock) 
+        values
+            (?, ?, ?)
+[17:19:11] binding parameter [1] as [VARCHAR] - [A red plane]
+[17:19:11] binding parameter [2] as [VARCHAR] - [Plane]
+[17:19:11] binding parameter [3] as [INTEGER] - [50]
+[17:19:11] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[17:19:11] binding parameter [1] as [VARCHAR] - [Red]
+[17:19:11] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[17:19:11] binding parameter [1] as [VARCHAR] - [Green]
+[17:19:11] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[17:19:11] binding parameter [1] as [VARCHAR] - [White]
+[17:19:11] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[17:19:11] binding parameter [1] as [VARCHAR] - [Black]
+[17:19:11] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[17:19:11] binding parameter [1] as [VARCHAR] - [Yellow]
+[17:19:11] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[17:19:11] binding parameter [1] as [VARCHAR] - [Blue]
+[17:19:11] 
+    /* insert model.ProductColor
+        */ insert 
+        into
+            productcolors
+            (colorId, productId) 
+        values
+            (?, ?)
+[17:19:11] binding parameter [1] as [INTEGER] - [2]
+[17:19:11] binding parameter [2] as [INTEGER] - [1]
+[17:19:11] 
+    /* insert model.ProductColor
+        */ insert 
+        into
+            productcolors
+            (colorId, productId) 
+        values
+            (?, ?)
+[17:19:11] binding parameter [1] as [INTEGER] - [4]
+[17:19:11] binding parameter [2] as [INTEGER] - [2]
+[17:19:11] 
+    /* insert model.ProductColor
+        */ insert 
+        into
+            productcolors
+            (colorId, productId) 
+        values
+            (?, ?)
+[17:19:11] binding parameter [1] as [INTEGER] - [3]
+[17:19:11] binding parameter [2] as [INTEGER] - [3]
+[17:19:11] 
+    /* insert model.ProductColor
+        */ insert 
+        into
+            productcolors
+            (colorId, productId) 
+        values
+            (?, ?)
+[17:19:11] binding parameter [1] as [INTEGER] - [5]
+[17:19:11] binding parameter [2] as [INTEGER] - [4]
+[17:19:11] 
+    /* insert model.ProductColor
+        */ insert 
+        into
+            productcolors
+            (colorId, productId) 
+        values
+            (?, ?)
+[17:19:11] binding parameter [1] as [INTEGER] - [1]
+[17:19:11] binding parameter [2] as [INTEGER] - [5]
+[17:19:11] 
+    /* insert model.Price
+        */ insert 
+        into
+            prices
+            (currency, price, productid, vat) 
+        values
+            (?, ?, ?, ?)
+[17:19:11] binding parameter [1] as [VARCHAR] - [EURO]
+[17:19:11] binding parameter [2] as [DOUBLE] - [10.0]
+[17:19:11] binding parameter [3] as [INTEGER] - [1]
+[17:19:11] binding parameter [4] as [INTEGER] - [0]
+[17:19:11] 
+    /* insert model.Price
+        */ insert 
+        into
+            prices
+            (currency, price, productid, vat) 
+        values
+            (?, ?, ?, ?)
+[17:19:11] binding parameter [1] as [VARCHAR] - [RON]
+[17:19:11] binding parameter [2] as [DOUBLE] - [50.0]
+[17:19:11] binding parameter [3] as [INTEGER] - [2]
+[17:19:11] binding parameter [4] as [INTEGER] - [17]
+[17:19:11] 
+    /* insert model.Price
+        */ insert 
+        into
+            prices
+            (currency, price, productid, vat) 
+        values
+            (?, ?, ?, ?)
+[17:19:11] binding parameter [1] as [VARCHAR] - [USD]
+[17:19:11] binding parameter [2] as [DOUBLE] - [20.0]
+[17:19:11] binding parameter [3] as [INTEGER] - [3]
+[17:19:11] binding parameter [4] as [INTEGER] - [0]
+[17:19:11] 
+    /* insert model.Price
+        */ insert 
+        into
+            prices
+            (currency, price, productid, vat) 
+        values
+            (?, ?, ?, ?)
+[17:19:11] binding parameter [1] as [VARCHAR] - [PESOS]
+[17:19:11] binding parameter [2] as [DOUBLE] - [40.0]
+[17:19:11] binding parameter [3] as [INTEGER] - [4]
+[17:19:11] binding parameter [4] as [INTEGER] - [0]
+[17:19:11] 
+    /* insert model.Price
+        */ insert 
+        into
+            prices
+            (currency, price, productid, vat) 
+        values
+            (?, ?, ?, ?)
+[17:19:11] binding parameter [1] as [VARCHAR] - [RON]
+[17:19:11] binding parameter [2] as [DOUBLE] - [53.0]
+[17:19:11] binding parameter [3] as [INTEGER] - [5]
+[17:19:11] binding parameter [4] as [INTEGER] - [17]
+[17:19:56] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[17:19:58] 
+    drop table if exists colors cascade
+[17:19:58] 
+    drop table if exists prices cascade
+[17:19:58] 
+    drop table if exists productcolors cascade
+[17:19:58] 
+    drop table if exists products cascade
+[17:19:58] 
+    drop table if exists test cascade
+[17:19:58] 
+    drop sequence hibernate_sequence
+[17:19:58] create sequence hibernate_sequence start 1 increment 1
+[17:19:58] 
+    create table colors (
+        id  serial not null,
+        name varchar(255),
+        primary key (id)
+    )
+[17:19:58] 
+    create table prices (
+        id  serial not null,
+        currency varchar(255),
+        price float8,
+        productid int4 not null,
+        vat int4,
+        primary key (id)
+    )
+[17:19:58] 
+    create table productcolors (
+        id  serial not null,
+        colorId int4 not null,
+        productId int4 not null,
+        primary key (id)
+    )
+[17:19:58] 
+    create table products (
+        id  serial not null,
+        description varchar(255),
+        name varchar(255),
+        stock int4,
+        primary key (id)
+    )
+[17:19:58] 
+    create table test (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[17:19:58] 
+    alter table test 
+        add constraint UK_1chowmbf27f0cbp7on9ysvhjo unique (name)
+[17:19:58] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock) 
+        values
+            (?, ?, ?)
+[17:19:58] binding parameter [1] as [VARCHAR] - [A blue plane]
+[17:19:58] binding parameter [2] as [VARCHAR] - [Plane]
+[17:19:58] binding parameter [3] as [INTEGER] - [10]
+[17:19:58] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock) 
+        values
+            (?, ?, ?)
+[17:19:58] binding parameter [1] as [VARCHAR] - [A red car]
+[17:19:58] binding parameter [2] as [VARCHAR] - [Car]
+[17:19:58] binding parameter [3] as [INTEGER] - [20]
+[17:19:58] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock) 
+        values
+            (?, ?, ?)
+[17:19:58] binding parameter [1] as [VARCHAR] - [A black doll]
+[17:19:58] binding parameter [2] as [VARCHAR] - [Doll]
+[17:19:58] binding parameter [3] as [INTEGER] - [30]
+[17:19:58] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock) 
+        values
+            (?, ?, ?)
+[17:19:58] binding parameter [1] as [VARCHAR] - [A green lego set]
+[17:19:58] binding parameter [2] as [VARCHAR] - [Lego]
+[17:19:58] binding parameter [3] as [INTEGER] - [40]
+[17:19:58] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock) 
+        values
+            (?, ?, ?)
+[17:19:58] binding parameter [1] as [VARCHAR] - [A red plane]
+[17:19:58] binding parameter [2] as [VARCHAR] - [Plane]
+[17:19:58] binding parameter [3] as [INTEGER] - [50]
+[17:19:58] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[17:19:58] binding parameter [1] as [VARCHAR] - [Red]
+[17:19:58] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[17:19:58] binding parameter [1] as [VARCHAR] - [Green]
+[17:19:58] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[17:19:58] binding parameter [1] as [VARCHAR] - [White]
+[17:19:58] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[17:19:58] binding parameter [1] as [VARCHAR] - [Black]
+[17:19:58] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[17:19:58] binding parameter [1] as [VARCHAR] - [Yellow]
+[17:19:58] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[17:19:58] binding parameter [1] as [VARCHAR] - [Blue]
+[17:19:58] 
+    /* insert model.ProductColor
+        */ insert 
+        into
+            productcolors
+            (colorId, productId) 
+        values
+            (?, ?)
+[17:19:58] binding parameter [1] as [INTEGER] - [2]
+[17:19:58] binding parameter [2] as [INTEGER] - [1]
+[17:19:58] 
+    /* insert model.ProductColor
+        */ insert 
+        into
+            productcolors
+            (colorId, productId) 
+        values
+            (?, ?)
+[17:19:58] binding parameter [1] as [INTEGER] - [4]
+[17:19:58] binding parameter [2] as [INTEGER] - [2]
+[17:19:58] 
+    /* insert model.ProductColor
+        */ insert 
+        into
+            productcolors
+            (colorId, productId) 
+        values
+            (?, ?)
+[17:19:58] binding parameter [1] as [INTEGER] - [3]
+[17:19:58] binding parameter [2] as [INTEGER] - [3]
+[17:19:58] 
+    /* insert model.ProductColor
+        */ insert 
+        into
+            productcolors
+            (colorId, productId) 
+        values
+            (?, ?)
+[17:19:58] binding parameter [1] as [INTEGER] - [5]
+[17:19:58] binding parameter [2] as [INTEGER] - [4]
+[17:19:58] 
+    /* insert model.ProductColor
+        */ insert 
+        into
+            productcolors
+            (colorId, productId) 
+        values
+            (?, ?)
+[17:19:58] binding parameter [1] as [INTEGER] - [1]
+[17:19:58] binding parameter [2] as [INTEGER] - [5]
+[17:19:58] 
+    /* insert model.Price
+        */ insert 
+        into
+            prices
+            (currency, price, productid, vat) 
+        values
+            (?, ?, ?, ?)
+[17:19:58] binding parameter [1] as [VARCHAR] - [EURO]
+[17:19:58] binding parameter [2] as [DOUBLE] - [10.0]
+[17:19:58] binding parameter [3] as [INTEGER] - [1]
+[17:19:58] binding parameter [4] as [INTEGER] - [0]
+[17:19:58] 
+    /* insert model.Price
+        */ insert 
+        into
+            prices
+            (currency, price, productid, vat) 
+        values
+            (?, ?, ?, ?)
+[17:19:58] binding parameter [1] as [VARCHAR] - [RON]
+[17:19:58] binding parameter [2] as [DOUBLE] - [50.0]
+[17:19:58] binding parameter [3] as [INTEGER] - [2]
+[17:19:58] binding parameter [4] as [INTEGER] - [17]
+[17:19:58] 
+    /* insert model.Price
+        */ insert 
+        into
+            prices
+            (currency, price, productid, vat) 
+        values
+            (?, ?, ?, ?)
+[17:19:58] binding parameter [1] as [VARCHAR] - [USD]
+[17:19:58] binding parameter [2] as [DOUBLE] - [20.0]
+[17:19:58] binding parameter [3] as [INTEGER] - [3]
+[17:19:58] binding parameter [4] as [INTEGER] - [0]
+[17:19:58] 
+    /* insert model.Price
+        */ insert 
+        into
+            prices
+            (currency, price, productid, vat) 
+        values
+            (?, ?, ?, ?)
+[17:19:58] binding parameter [1] as [VARCHAR] - [PESOS]
+[17:19:58] binding parameter [2] as [DOUBLE] - [40.0]
+[17:19:58] binding parameter [3] as [INTEGER] - [4]
+[17:19:58] binding parameter [4] as [INTEGER] - [0]
+[17:19:58] 
+    /* insert model.Price
+        */ insert 
+        into
+            prices
+            (currency, price, productid, vat) 
+        values
+            (?, ?, ?, ?)
+[17:19:58] binding parameter [1] as [VARCHAR] - [RON]
+[17:19:58] binding parameter [2] as [DOUBLE] - [53.0]
+[17:19:58] binding parameter [3] as [INTEGER] - [5]
+[17:19:58] binding parameter [4] as [INTEGER] - [17]
+[17:20:27] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[17:20:30] 
+    drop table if exists colors cascade
+[17:20:30] 
+    drop table if exists prices cascade
+[17:20:30] 
+    drop table if exists productcolors cascade
+[17:20:30] 
+    drop table if exists products cascade
+[17:20:30] 
+    drop table if exists test cascade
+[17:20:30] 
+    drop sequence hibernate_sequence
+[17:20:30] create sequence hibernate_sequence start 1 increment 1
+[17:20:30] 
+    create table colors (
+        id  serial not null,
+        name varchar(255),
+        primary key (id)
+    )
+[17:20:30] 
+    create table prices (
+        id  serial not null,
+        currency varchar(255),
+        price float8,
+        productid int4 not null,
+        vat int4,
+        primary key (id)
+    )
+[17:20:30] 
+    create table productcolors (
+        id  serial not null,
+        colorId int4 not null,
+        productId int4 not null,
+        primary key (id)
+    )
+[17:20:30] 
+    create table products (
+        id  serial not null,
+        description varchar(255),
+        name varchar(255),
+        stock int4,
+        primary key (id)
+    )
+[17:20:30] 
+    create table test (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[17:20:30] 
+    alter table test 
+        add constraint UK_1chowmbf27f0cbp7on9ysvhjo unique (name)
+[17:20:30] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock) 
+        values
+            (?, ?, ?)
+[17:20:30] binding parameter [1] as [VARCHAR] - [A blue plane]
+[17:20:30] binding parameter [2] as [VARCHAR] - [Plane]
+[17:20:30] binding parameter [3] as [INTEGER] - [10]
+[17:20:30] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock) 
+        values
+            (?, ?, ?)
+[17:20:30] binding parameter [1] as [VARCHAR] - [A red car]
+[17:20:30] binding parameter [2] as [VARCHAR] - [Car]
+[17:20:30] binding parameter [3] as [INTEGER] - [20]
+[17:20:30] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock) 
+        values
+            (?, ?, ?)
+[17:20:30] binding parameter [1] as [VARCHAR] - [A black doll]
+[17:20:30] binding parameter [2] as [VARCHAR] - [Doll]
+[17:20:30] binding parameter [3] as [INTEGER] - [30]
+[17:20:30] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock) 
+        values
+            (?, ?, ?)
+[17:20:30] binding parameter [1] as [VARCHAR] - [A green lego set]
+[17:20:30] binding parameter [2] as [VARCHAR] - [Lego]
+[17:20:30] binding parameter [3] as [INTEGER] - [40]
+[17:20:30] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock) 
+        values
+            (?, ?, ?)
+[17:20:30] binding parameter [1] as [VARCHAR] - [A red plane]
+[17:20:30] binding parameter [2] as [VARCHAR] - [Plane]
+[17:20:30] binding parameter [3] as [INTEGER] - [50]
+[17:20:30] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[17:20:30] binding parameter [1] as [VARCHAR] - [Red]
+[17:20:30] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[17:20:30] binding parameter [1] as [VARCHAR] - [Green]
+[17:20:30] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[17:20:30] binding parameter [1] as [VARCHAR] - [White]
+[17:20:30] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[17:20:30] binding parameter [1] as [VARCHAR] - [Black]
+[17:20:30] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[17:20:30] binding parameter [1] as [VARCHAR] - [Yellow]
+[17:20:30] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[17:20:30] binding parameter [1] as [VARCHAR] - [Blue]
+[17:20:30] 
+    /* insert model.ProductColor
+        */ insert 
+        into
+            productcolors
+            (colorId, productId) 
+        values
+            (?, ?)
+[17:20:30] binding parameter [1] as [INTEGER] - [2]
+[17:20:30] binding parameter [2] as [INTEGER] - [1]
+[17:20:30] 
+    /* insert model.ProductColor
+        */ insert 
+        into
+            productcolors
+            (colorId, productId) 
+        values
+            (?, ?)
+[17:20:30] binding parameter [1] as [INTEGER] - [4]
+[17:20:30] binding parameter [2] as [INTEGER] - [2]
+[17:20:30] 
+    /* insert model.ProductColor
+        */ insert 
+        into
+            productcolors
+            (colorId, productId) 
+        values
+            (?, ?)
+[17:20:30] binding parameter [1] as [INTEGER] - [3]
+[17:20:30] binding parameter [2] as [INTEGER] - [3]
+[17:20:30] 
+    /* insert model.ProductColor
+        */ insert 
+        into
+            productcolors
+            (colorId, productId) 
+        values
+            (?, ?)
+[17:20:30] binding parameter [1] as [INTEGER] - [5]
+[17:20:30] binding parameter [2] as [INTEGER] - [4]
+[17:20:30] 
+    /* insert model.ProductColor
+        */ insert 
+        into
+            productcolors
+            (colorId, productId) 
+        values
+            (?, ?)
+[17:20:30] binding parameter [1] as [INTEGER] - [1]
+[17:20:30] binding parameter [2] as [INTEGER] - [5]
+[17:20:30] 
+    /* insert model.Price
+        */ insert 
+        into
+            prices
+            (currency, price, productid, vat) 
+        values
+            (?, ?, ?, ?)
+[17:20:30] binding parameter [1] as [VARCHAR] - [EURO]
+[17:20:30] binding parameter [2] as [DOUBLE] - [10.0]
+[17:20:30] binding parameter [3] as [INTEGER] - [1]
+[17:20:30] binding parameter [4] as [INTEGER] - [0]
+[17:20:30] 
+    /* insert model.Price
+        */ insert 
+        into
+            prices
+            (currency, price, productid, vat) 
+        values
+            (?, ?, ?, ?)
+[17:20:30] binding parameter [1] as [VARCHAR] - [RON]
+[17:20:30] binding parameter [2] as [DOUBLE] - [50.0]
+[17:20:30] binding parameter [3] as [INTEGER] - [2]
+[17:20:30] binding parameter [4] as [INTEGER] - [17]
+[17:20:30] 
+    /* insert model.Price
+        */ insert 
+        into
+            prices
+            (currency, price, productid, vat) 
+        values
+            (?, ?, ?, ?)
+[17:20:30] binding parameter [1] as [VARCHAR] - [USD]
+[17:20:30] binding parameter [2] as [DOUBLE] - [20.0]
+[17:20:30] binding parameter [3] as [INTEGER] - [3]
+[17:20:30] binding parameter [4] as [INTEGER] - [0]
+[17:20:30] 
+    /* insert model.Price
+        */ insert 
+        into
+            prices
+            (currency, price, productid, vat) 
+        values
+            (?, ?, ?, ?)
+[17:20:30] binding parameter [1] as [VARCHAR] - [PESOS]
+[17:20:30] binding parameter [2] as [DOUBLE] - [40.0]
+[17:20:30] binding parameter [3] as [INTEGER] - [4]
+[17:20:30] binding parameter [4] as [INTEGER] - [0]
+[17:20:30] 
+    /* insert model.Price
+        */ insert 
+        into
+            prices
+            (currency, price, productid, vat) 
+        values
+            (?, ?, ?, ?)
+[17:20:30] binding parameter [1] as [VARCHAR] - [RON]
+[17:20:30] binding parameter [2] as [DOUBLE] - [53.0]
+[17:20:30] binding parameter [3] as [INTEGER] - [5]
+[17:20:30] binding parameter [4] as [INTEGER] - [17]
+[17:20:30] 
+    /* select
+        e 
+    from
+        Color e */ select
+            color0_.id as id1_0_,
+            color0_.name as name2_0_ 
+        from
+            colors color0_
+[17:22:36] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[17:22:38] 
+    drop table if exists colors cascade
+[17:22:38] 
+    drop table if exists prices cascade
+[17:22:38] 
+    drop table if exists productcolors cascade
+[17:22:38] 
+    drop table if exists products cascade
+[17:22:38] 
+    drop table if exists test cascade
+[17:22:38] 
+    drop sequence hibernate_sequence
+[17:22:38] create sequence hibernate_sequence start 1 increment 1
+[17:22:38] 
+    create table colors (
+        id  serial not null,
+        name varchar(255),
+        primary key (id)
+    )
+[17:22:38] 
+    create table prices (
+        id  serial not null,
+        currency varchar(255),
+        price float8,
+        productid int4 not null,
+        vat int4,
+        primary key (id)
+    )
+[17:22:38] 
+    create table productcolors (
+        id  serial not null,
+        colorId int4 not null,
+        productId int4 not null,
+        primary key (id)
+    )
+[17:22:38] 
+    create table products (
+        id  serial not null,
+        description varchar(255),
+        name varchar(255),
+        stock int4,
+        primary key (id)
+    )
+[17:22:38] 
+    create table test (
+        id int8 not null,
+        name varchar(255),
+        primary key (id)
+    )
+[17:22:38] 
+    alter table test 
+        add constraint UK_1chowmbf27f0cbp7on9ysvhjo unique (name)
+[17:22:38] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock) 
+        values
+            (?, ?, ?)
+[17:22:38] binding parameter [1] as [VARCHAR] - [A blue plane]
+[17:22:38] binding parameter [2] as [VARCHAR] - [Plane]
+[17:22:38] binding parameter [3] as [INTEGER] - [10]
+[17:22:38] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock) 
+        values
+            (?, ?, ?)
+[17:22:38] binding parameter [1] as [VARCHAR] - [A red car]
+[17:22:38] binding parameter [2] as [VARCHAR] - [Car]
+[17:22:38] binding parameter [3] as [INTEGER] - [20]
+[17:22:38] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock) 
+        values
+            (?, ?, ?)
+[17:22:38] binding parameter [1] as [VARCHAR] - [A black doll]
+[17:22:38] binding parameter [2] as [VARCHAR] - [Doll]
+[17:22:38] binding parameter [3] as [INTEGER] - [30]
+[17:22:38] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock) 
+        values
+            (?, ?, ?)
+[17:22:38] binding parameter [1] as [VARCHAR] - [A green lego set]
+[17:22:38] binding parameter [2] as [VARCHAR] - [Lego]
+[17:22:38] binding parameter [3] as [INTEGER] - [40]
+[17:22:38] 
+    /* insert model.Product
+        */ insert 
+        into
+            products
+            (description, name, stock) 
+        values
+            (?, ?, ?)
+[17:22:38] binding parameter [1] as [VARCHAR] - [A red plane]
+[17:22:38] binding parameter [2] as [VARCHAR] - [Plane]
+[17:22:38] binding parameter [3] as [INTEGER] - [50]
+[17:22:38] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[17:22:38] binding parameter [1] as [VARCHAR] - [Red]
+[17:22:38] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[17:22:38] binding parameter [1] as [VARCHAR] - [Green]
+[17:22:38] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[17:22:38] binding parameter [1] as [VARCHAR] - [White]
+[17:22:38] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[17:22:38] binding parameter [1] as [VARCHAR] - [Black]
+[17:22:38] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[17:22:38] binding parameter [1] as [VARCHAR] - [Yellow]
+[17:22:38] 
+    /* insert model.Color
+        */ insert 
+        into
+            colors
+            (name) 
+        values
+            (?)
+[17:22:38] binding parameter [1] as [VARCHAR] - [Blue]
+[17:22:38] 
+    /* insert model.ProductColor
+        */ insert 
+        into
+            productcolors
+            (colorId, productId) 
+        values
+            (?, ?)
+[17:22:38] binding parameter [1] as [INTEGER] - [2]
+[17:22:38] binding parameter [2] as [INTEGER] - [1]
+[17:22:38] 
+    /* insert model.ProductColor
+        */ insert 
+        into
+            productcolors
+            (colorId, productId) 
+        values
+            (?, ?)
+[17:22:38] binding parameter [1] as [INTEGER] - [4]
+[17:22:38] binding parameter [2] as [INTEGER] - [2]
+[17:22:38] 
+    /* insert model.ProductColor
+        */ insert 
+        into
+            productcolors
+            (colorId, productId) 
+        values
+            (?, ?)
+[17:22:38] binding parameter [1] as [INTEGER] - [3]
+[17:22:38] binding parameter [2] as [INTEGER] - [3]
+[17:22:38] 
+    /* insert model.ProductColor
+        */ insert 
+        into
+            productcolors
+            (colorId, productId) 
+        values
+            (?, ?)
+[17:22:38] binding parameter [1] as [INTEGER] - [5]
+[17:22:38] binding parameter [2] as [INTEGER] - [4]
+[17:22:38] 
+    /* insert model.ProductColor
+        */ insert 
+        into
+            productcolors
+            (colorId, productId) 
+        values
+            (?, ?)
+[17:22:38] binding parameter [1] as [INTEGER] - [1]
+[17:22:38] binding parameter [2] as [INTEGER] - [5]
+[17:22:38] 
+    /* insert model.Price
+        */ insert 
+        into
+            prices
+            (currency, price, productid, vat) 
+        values
+            (?, ?, ?, ?)
+[17:22:38] binding parameter [1] as [VARCHAR] - [EURO]
+[17:22:38] binding parameter [2] as [DOUBLE] - [10.0]
+[17:22:38] binding parameter [3] as [INTEGER] - [1]
+[17:22:38] binding parameter [4] as [INTEGER] - [0]
+[17:22:38] 
+    /* insert model.Price
+        */ insert 
+        into
+            prices
+            (currency, price, productid, vat) 
+        values
+            (?, ?, ?, ?)
+[17:22:38] binding parameter [1] as [VARCHAR] - [RON]
+[17:22:38] binding parameter [2] as [DOUBLE] - [50.0]
+[17:22:38] binding parameter [3] as [INTEGER] - [2]
+[17:22:38] binding parameter [4] as [INTEGER] - [17]
+[17:22:38] 
+    /* insert model.Price
+        */ insert 
+        into
+            prices
+            (currency, price, productid, vat) 
+        values
+            (?, ?, ?, ?)
+[17:22:38] binding parameter [1] as [VARCHAR] - [USD]
+[17:22:38] binding parameter [2] as [DOUBLE] - [20.0]
+[17:22:38] binding parameter [3] as [INTEGER] - [3]
+[17:22:38] binding parameter [4] as [INTEGER] - [0]
+[17:22:38] 
+    /* insert model.Price
+        */ insert 
+        into
+            prices
+            (currency, price, productid, vat) 
+        values
+            (?, ?, ?, ?)
+[17:22:38] binding parameter [1] as [VARCHAR] - [PESOS]
+[17:22:38] binding parameter [2] as [DOUBLE] - [40.0]
+[17:22:38] binding parameter [3] as [INTEGER] - [4]
+[17:22:38] binding parameter [4] as [INTEGER] - [0]
+[17:22:38] 
+    /* insert model.Price
+        */ insert 
+        into
+            prices
+            (currency, price, productid, vat) 
+        values
+            (?, ?, ?, ?)
+[17:22:38] binding parameter [1] as [VARCHAR] - [RON]
+[17:22:38] binding parameter [2] as [DOUBLE] - [53.0]
+[17:22:38] binding parameter [3] as [INTEGER] - [5]
+[17:22:38] binding parameter [4] as [INTEGER] - [17]
+[17:22:38] 
+    /* select
+        e 
+    from
+        Color e */ select
+            color0_.id as id1_0_,
+            color0_.name as name2_0_ 
+        from
+            colors color0_
